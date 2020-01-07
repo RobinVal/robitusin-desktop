@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf-Desktop-Robitusin", "Wpf-Desktop-Robitusin\Wpf-Desktop-Robitusin.csproj", "{FEFDDB89-57D2-479B-9E1C-E8EDAC01BD6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEFDDB89-57D2-479B-9E1C-E8EDAC01BD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFDDB89-57D2-479B-9E1C-E8EDAC01BD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFDDB89-57D2-479B-9E1C-E8EDAC01BD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFDDB89-57D2-479B-9E1C-E8EDAC01BD6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DAF4734-033C-4E7A-B694-53E11FAC89C6}
+	EndGlobalSection
+EndGlobal

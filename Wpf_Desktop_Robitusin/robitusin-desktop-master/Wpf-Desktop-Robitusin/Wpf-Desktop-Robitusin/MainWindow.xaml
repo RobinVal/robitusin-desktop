@@ -1,0 +1,19 @@
+﻿<Window x:Class="Wpf_Desktop_Robitusin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Desktop_Robitusin"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="C:\Users\horejsiantonin\Desktop\robitusin-desktop-master\robitusin-desktop-master\Wpf-Desktop-Robitusin\Wpf-Desktop-Robitusin/ee9a410c73805619a0183437d24d2884.jpg" Stretch="Fill"></Image>
+        
+    </Grid>
+    
+
+</Window>
