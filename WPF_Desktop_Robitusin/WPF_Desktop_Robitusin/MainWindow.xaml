@@ -1,0 +1,90 @@
+﻿<Window x:Class="Wpf_Desktop_Robitusin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Desktop_Robitusin"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600">
+    <Window.Resources>
+        <Style TargetType="Viewbox" x:Key="vbH1">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="Viewbox" x:Key="vbH2">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="5 0 0 0"/>
+        </Style>
+        <Style TargetType="Viewbox" x:Key="vbH3">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="20 0 0 0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+
+        </Style>
+        <Style TargetType="TextBox" x:Key="tb_Reg">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="0 0 0 20"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Row="0" Grid.Column="1" Style="{DynamicResource vbH1}">
+            <Label FontWeight="Bold">Sign Up</Label>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="1" Style="{DynamicResource vbH2}">
+            <Label >First Name:</Label>
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.Column="1" Style="{DynamicResource vbH3}">
+            <TextBox Name="tb_fName" Style="{DynamicResource tb_Reg}">Mike</TextBox>
+        </Viewbox>
+        <Viewbox Grid.Row="3" Grid.Column="1" Style="{DynamicResource vbH2}">
+            <Label>Last Name:</Label>
+        </Viewbox>
+        <Viewbox Grid.Row="4" Grid.Column="1" Style="{DynamicResource vbH3}">
+            <TextBox Name="tb_lName" Style="{DynamicResource tb_Reg}">Wazovsky</TextBox>
+        </Viewbox>
+        <Viewbox Grid.Row="5" Grid.Column="1" Style="{DynamicResource vbH2}">
+            <Label>Email:</Label>
+        </Viewbox>
+        <Viewbox Grid.Row="6" Grid.Column="1" Style="{DynamicResource vbH3}">
+            <TextBox Name="tb_Email" Style="{DynamicResource tb_Reg}">MikeWazovsky@Priserakov.waaagh</TextBox>
+        </Viewbox>
+        <Viewbox Grid.Row="7" Grid.Column="1" Style="{DynamicResource vbH2}">
+            <Label>Password:</Label>
+        </Viewbox>
+        <Viewbox Grid.Row="8" Grid.Column="1" Style="{DynamicResource vbH3}">
+            <TextBox Name="tb_Password" Style="{DynamicResource tb_Reg}">123456789Ab</TextBox>
+        </Viewbox>
+        <Viewbox Grid.Row="9" Grid.Column="1" Style="{DynamicResource vbH2}">
+            <Label>Repeat Password:</Label>
+        </Viewbox>
+        <Viewbox Grid.Row="10" Grid.Column="1" Style="{DynamicResource vbH3}">
+            <TextBox Name="tb_PasswordCorr" Style="{DynamicResource tb_Reg}">123456789Ab</TextBox>
+        </Viewbox>
+        <Viewbox Grid.Row="11" Grid.Column="1" Stretch="Fill">
+            <StackPanel Orientation="Horizontal">
+                <Button Name="bt_Submit" Click="bt_Submit_Click">Submit</Button>
+                <Button Name="bt_Reset" Click="bt_Reset_Click">Reset</Button>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>

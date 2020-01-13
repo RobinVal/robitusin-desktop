@@ -1,0 +1,17 @@
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\bin\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.exe
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\bin\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.deps.json
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\bin\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.runtimeconfig.json
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\bin\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.runtimeconfig.dev.json
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\bin\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.dll
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\bin\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.pdb
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.csprojAssemblyReference.cache
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\App.g.cs
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin_MarkupCompile.cache
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin_MarkupCompile.lref
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.g.resources
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.AssemblyInfoInputs.cache
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.AssemblyInfo.cs
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.dll
+D:\robitusin-desktop\WPF_Desktop_Robitusin\WPF_Desktop_Robitusin\obj\Debug\netcoreapp3.1\WPF_Desktop_Robitusin.pdb
