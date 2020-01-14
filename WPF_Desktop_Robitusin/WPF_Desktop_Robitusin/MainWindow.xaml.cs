@@ -21,13 +21,15 @@ namespace Wpf_Desktop_Robitusin
     /// </summary>
     public partial class MainWindow : Window
     {
-        MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;database=robitusin;uid=root;password=;CharSet=utf8;Persist Security Info=True");
+        /*MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;database=robitusin;uid=root;password=;CharSet=utf8;Persist Security Info=True");*/
         public MainWindow()
         {
             InitializeComponent();
         }
+        User myUser;
+        Validations val = new Validations();
 
-        private void bt_Submit_Click(object sender, RoutedEventArgs e)
+        /*private void bt_Submit_Click(object sender, RoutedEventArgs e)
         {
             string Query = "";
             con.Open();
@@ -57,15 +59,39 @@ namespace Wpf_Desktop_Robitusin
                 MessageBox.Show("Hesla se Neshodují");
             }
             
-        }
+        }*/
 
         private void bt_Reset_Click(object sender, RoutedEventArgs e)
         {
-            tb_fName.Text = "";
-            tb_lName.Text = "";
+            tb_Username.Text = "";
             tb_Email.Text = "";
             tb_Password.Text = "";
             tb_PasswordCorr.Text = "";
+        }
+
+        private void bt_Submit_Click(object sender, RoutedEventArgs e)
+        {
+            myUser = new User();
+            myUser.UserName = tb_Username.Text;
+            myUser.Email = tb_Email.Text;
+            myUser.Password = tb_Password.Text;
+            myUser.ProfImage = "";
+            myUser.Token = "";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow lw = new LoginWindow();
+            lw.Show();
+            if(lw.Activate() == true)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Kontaktujte prosím podporu :)");
+            }
+            
         }
     }
 }

@@ -5,86 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Desktop_Robitusin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600">
+        Title="Sign up Now!" Height="450" Width="800"
+        >
     <Window.Resources>
+        <Style TargetType="Label" x:Key="LbH2">
+            <Setter Property="FontSize" Value="5"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+        </Style>
+        <Style TargetType="Label" x:Key="LbH1">
+            <Setter Property="Foreground" Value="#111000"/>
+        </Style>
         <Style TargetType="Viewbox" x:Key="vbH1">
             <Setter Property="HorizontalAlignment" Value="Left"/>
+            
         </Style>
         <Style TargetType="Viewbox" x:Key="vbH2">
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Margin" Value="5 0 0 0"/>
+            <Setter Property="Margin" Value="0 5 0 5"/>
+            
+
         </Style>
         <Style TargetType="Viewbox" x:Key="vbH3">
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Margin" Value="20 0 0 0"/>
-            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="8 0 10 0"/>
+            <Setter Property="Stretch" Value="Fill"/>
+            
+            <Setter Property="MinHeight" Value="10"/>
+            
 
         </Style>
         <Style TargetType="TextBox" x:Key="tb_Reg">
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Margin" Value="0 0 0 20"/>
+            <Setter Property="Margin" Value="0 0 0 0"/>
+            <Setter Property="Padding" Value="0 0 120 0"/>
+            <Setter Property="FontSize" Value="30"/>
+            
+
         </Style>
     </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="0.8*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="0.8*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="0.8*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="0.8*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            
+            
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
+        
+        <!--Background Renctangles.Fill ( Gradient ) -->
+        
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.RowSpan="10">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="#111222" Offset="0.2" />
+                    <GradientStop Color="Gray" Offset="1.5" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Grid.Column="1" Grid.Row="0" Grid.RowSpan="10" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.0,0.6" StartPoint="0.5,0.7">
+                    <GradientStop Color="#333739" Offset="0" />
+                    <GradientStop Color="Gray" Offset="0.7" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
 
-        <Viewbox Grid.Row="0" Grid.Column="1" Style="{DynamicResource vbH1}">
-            <Label FontWeight="Bold">Sign Up</Label>
+
+        <Viewbox Grid.Row="0" Grid.Column="2">
+            <Button Background="#999997" Margin="5 5 5 5" BorderThickness="1" BorderBrush="#333333" FontSize="5" Padding="4" FontWeight="DemiBold" Click="Button_Click">Sign in</Button>
+        </Viewbox>
+        <Viewbox Grid.Row="0" Grid.Column="0" Grid.RowSpan="10">
+            <Image Source="405ad052625fc235b54c50049f27b032.jpg" Stretch="Fill"  Margin="0 0 0 0"/>
+        </Viewbox>
+        <Viewbox Grid.ColumnSpan="1" Grid.Row="0" Grid.Column="1" Style="{DynamicResource vbH1}">
+            <Label FontWeight="Black" Style="{DynamicResource LbH1}">Sign Up</Label>
         </Viewbox>
         <Viewbox Grid.Row="1" Grid.Column="1" Style="{DynamicResource vbH2}">
-            <Label >First Name:</Label>
+            <Label Style="{DynamicResource LbH2}">First Name :</Label>
         </Viewbox>
-        <Viewbox Grid.Row="2" Grid.Column="1" Style="{DynamicResource vbH3}">
-            <TextBox Name="tb_fName" Style="{DynamicResource tb_Reg}">Mike</TextBox>
+        <Viewbox Grid.Row="2" Grid.Column="1" Style="{DynamicResource vbH3}" Grid.ColumnSpan="2">
+            <TextBox Name="tb_Username" Style="{StaticResource tb_Reg}" ></TextBox>
         </Viewbox>
-        <Viewbox Grid.Row="3" Grid.Column="1" Style="{DynamicResource vbH2}">
-            <Label>Last Name:</Label>
+        
+        <Viewbox Grid.Row="3" Grid.Column="1" Style="{DynamicResource vbH2}" Grid.ColumnSpan="2">
+            <Label Style="{DynamicResource LbH2}">Email :</Label>
         </Viewbox>
-        <Viewbox Grid.Row="4" Grid.Column="1" Style="{DynamicResource vbH3}">
-            <TextBox Name="tb_lName" Style="{DynamicResource tb_Reg}">Wazovsky</TextBox>
+        <Viewbox Grid.Row="4" Grid.Column="1" Style="{DynamicResource vbH3}" Grid.ColumnSpan="2">
+            <TextBox Name="tb_Email" Style="{DynamicResource tb_Reg}"></TextBox>
         </Viewbox>
-        <Viewbox Grid.Row="5" Grid.Column="1" Style="{DynamicResource vbH2}">
-            <Label>Email:</Label>
+        <Viewbox Grid.Row="5" Grid.Column="1" Style="{DynamicResource vbH2}" Grid.ColumnSpan="2">
+            <Label Style="{DynamicResource LbH2}">Password :</Label>
         </Viewbox>
-        <Viewbox Grid.Row="6" Grid.Column="1" Style="{DynamicResource vbH3}">
-            <TextBox Name="tb_Email" Style="{DynamicResource tb_Reg}">MikeWazovsky@Priserakov.waaagh</TextBox>
+        <Viewbox Grid.Row="6" Grid.Column="1" Style="{DynamicResource vbH3}" Grid.ColumnSpan="2">
+            <TextBox Name="tb_Password" Style="{DynamicResource tb_Reg}"></TextBox>
         </Viewbox>
-        <Viewbox Grid.Row="7" Grid.Column="1" Style="{DynamicResource vbH2}">
-            <Label>Password:</Label>
+        <Viewbox Grid.Row="7" Grid.Column="1" Style="{DynamicResource vbH2}" Grid.ColumnSpan="2">
+            <Label Style="{DynamicResource LbH2}">Repeat Password :</Label>
         </Viewbox>
-        <Viewbox Grid.Row="8" Grid.Column="1" Style="{DynamicResource vbH3}">
-            <TextBox Name="tb_Password" Style="{DynamicResource tb_Reg}">123456789Ab</TextBox>
+        <Viewbox Grid.Row="8" Grid.Column="1" Style="{DynamicResource vbH3}" Grid.ColumnSpan="2">
+            <TextBox Name="tb_PasswordCorr" Style="{DynamicResource tb_Reg}"></TextBox>
         </Viewbox>
-        <Viewbox Grid.Row="9" Grid.Column="1" Style="{DynamicResource vbH2}">
-            <Label>Repeat Password:</Label>
+        <Viewbox Grid.Row="9" Grid.Column="1" Margin="5">
+            <Button Name="bt_Submit" Click="bt_Submit_Click" BorderThickness="0" Padding="5 0 5 0" Background="DarkGray" FontWeight="ExtraLight">Submit</Button>
         </Viewbox>
-        <Viewbox Grid.Row="10" Grid.Column="1" Style="{DynamicResource vbH3}">
-            <TextBox Name="tb_PasswordCorr" Style="{DynamicResource tb_Reg}">123456789Ab</TextBox>
+        <Viewbox Grid.Row="9" Grid.Column="2"  Margin="5">
+            <Button Name="bt_Reset" Click="bt_Reset_Click"  BorderThickness="0" Padding="5 0 5 0" Background="DarkGray" FontWeight="ExtraLight">Reset</Button>
         </Viewbox>
-        <Viewbox Grid.Row="11" Grid.Column="1" Stretch="Fill">
-            <StackPanel Orientation="Horizontal">
-                <Button Name="bt_Submit" Click="bt_Submit_Click">Submit</Button>
-                <Button Name="bt_Reset" Click="bt_Reset_Click">Reset</Button>
-            </StackPanel>
-        </Viewbox>
+        
     </Grid>
 </Window>

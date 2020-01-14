@@ -1,0 +1,51 @@
+﻿<Window x:Class="Wpf_Desktop_Robitusin.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Desktop_Robitusin"
+        mc:Ignorable="d"
+        
+        Title="Login" Height="300.467" Width="300.867">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Grid.RowSpan="1000" Grid.ColumnSpan="1000">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#333444" Offset="0" />
+                    <GradientStop Color="#333333" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Viewbox Grid.Row="0" Grid.ColumnSpan="2">
+            <Label Content="Sign In"  HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black" FontSize="30" Foreground="White"/>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right">
+            <Label Content="Username:" FontSize="5" Padding="10 0 2 0" FontWeight="Bold" Foreground="White"/>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill">
+            <TextBox Text="" FontSize="5" Padding="5 0 5 0" HorizontalAlignment="Left" BorderThickness="0" Margin="1 4 1 4" Name="tb_Log_Username" Opacity="1" Foreground="White" Background="#666779"/>
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right">
+            <Label Content="Password:" FontSize="5" Padding="10 0 2 0" FontWeight="Bold" Foreground="White"/>
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill">
+            <TextBox  FontSize="5" Padding="5 0 5 0" HorizontalAlignment="Left" BorderThickness="0" Margin="1 4 1 4" Background="#666779" Name="tb_log_Password" Foreground="White"/>
+        </Viewbox>
+        <Viewbox Grid.Row="3" Grid.Column="0">
+            <Button Foreground="black" Margin="8 0 8 0" Background="DimGray" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="1" Click="Button_Click">Back to Registration</Button>
+        </Viewbox>
+        <Viewbox Grid.Row="3" Grid.Column="1">
+            <Button Foreground="black" Margin="10" Background="DimGray" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="1" Name="bt_Log" Click="bt_Log_Click">Log In</Button>
+        </Viewbox>
+    </Grid>
+</Window>
