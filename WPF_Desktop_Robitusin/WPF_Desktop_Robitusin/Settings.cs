@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Wpf_Desktop_Robitusin
 {
-    class Api_Connect
+    public class Settings
     {
+        
     }
 }

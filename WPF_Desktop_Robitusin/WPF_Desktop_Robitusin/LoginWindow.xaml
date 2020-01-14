@@ -42,10 +42,10 @@
             <TextBox  FontSize="5" Padding="5 0 5 0" HorizontalAlignment="Left" BorderThickness="0" Margin="1 4 1 4" Background="#666779" Name="tb_log_Password" Foreground="White"/>
         </Viewbox>
         <Viewbox Grid.Row="3" Grid.Column="0">
-            <Button Foreground="black" Margin="8 0 8 0" Background="DimGray" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="1" Click="Button_Click">Back to Registration</Button>
+            <Button Foreground="White" Margin="8 0 8 0" Background="DimGray" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="0" Click="Button_Click" Padding="8">Back to Registration</Button>
         </Viewbox>
         <Viewbox Grid.Row="3" Grid.Column="1">
-            <Button Foreground="black" Margin="10" Background="DimGray" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="1" Name="bt_Log" Click="bt_Log_Click">Log In</Button>
+            <Button Foreground="White" Margin="10" Background="DimGray" FontWeight="SemiBold" BorderBrush="Black" BorderThickness="0" Name="bt_Log" Click="bt_Log_Click">Log In</Button>
         </Viewbox>
     </Grid>
 </Window>
