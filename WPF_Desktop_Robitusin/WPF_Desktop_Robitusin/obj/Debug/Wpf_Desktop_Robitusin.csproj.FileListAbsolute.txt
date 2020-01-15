@@ -40,3 +40,7 @@ D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\MainW
 D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\MainWindow.baml
 D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\LoginWindow.g.cs
 D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\LoginWindow.baml
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ChatWindow.g.cs
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ProfileWindow.g.cs
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ChatWindow.baml
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ProfileWindow.baml

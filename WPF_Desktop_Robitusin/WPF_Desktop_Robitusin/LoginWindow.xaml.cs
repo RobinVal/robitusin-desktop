@@ -19,6 +19,7 @@ namespace Wpf_Desktop_Robitusin
     /// </summary>
     public partial class LoginWindow : Window
     {
+        
         public LoginWindow()
         {
             InitializeComponent();
@@ -46,4 +47,4 @@ namespace Wpf_Desktop_Robitusin
             }
         }
     }
-}
+    
