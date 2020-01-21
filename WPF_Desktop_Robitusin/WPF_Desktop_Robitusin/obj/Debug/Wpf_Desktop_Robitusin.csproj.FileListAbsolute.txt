@@ -44,3 +44,7 @@ D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ChatW
 D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ProfileWindow.g.cs
 D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ChatWindow.baml
 D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\obj\Debug\ProfileWindow.baml
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\bin\Debug\Newtonsoft.Json.dll
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\bin\Debug\System.Net.Http.Formatting.dll
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\bin\Debug\Newtonsoft.Json.xml
+D:\robitusin-desktop\Wpf_Desktop_Robitusin\Wpf_Desktop_Robitusin\bin\Debug\System.Net.Http.Formatting.xml

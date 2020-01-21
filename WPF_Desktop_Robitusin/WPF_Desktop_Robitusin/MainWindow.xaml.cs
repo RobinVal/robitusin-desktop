@@ -21,10 +21,12 @@ namespace Wpf_Desktop_Robitusin
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         /*MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;database=robitusin;uid=root;password=;CharSet=utf8;Persist Security Info=True");*/
         public MainWindow()
         {
             InitializeComponent();
+
         }
         User myUser;
         Validations val = new Validations();
@@ -81,7 +83,7 @@ namespace Wpf_Desktop_Robitusin
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow lw = new LoginWindow();
+            LoginWindow lw = null;
             lw.Show();
             if(lw.Activate() == true)
             {

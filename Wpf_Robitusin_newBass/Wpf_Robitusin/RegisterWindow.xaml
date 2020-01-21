@@ -1,0 +1,80 @@
+﻿<Window x:Class="Wpf_Robitusin.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Robitusin"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="350" Width="450"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="45" FontWeight="ExtraLight" Margin="0 0 0 10" >
+            Sign Up
+        </TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
+            Username:
+        </TextBlock>
+        <TextBox x:Name="tb_Reg_Username" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight">
+            
+        </TextBox>
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
+            Email:
+        </TextBlock>
+        <TextBox x:Name="tb_Reg_Email"  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight">
+
+        </TextBox>
+        <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
+            Password:
+        </TextBlock>
+        <TextBox x:Name="tb_Reg_Password"  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight">
+
+        </TextBox>
+        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
+            Repeat Pass:
+        </TextBlock>
+        <TextBox x:Name="tb_Reg_rPassword" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight" TextChanged="tb_Reg_rPassword_TextChanged">
+
+        </TextBox>
+        <TextBlock x:Name="Tbl_notSmlr" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   Margin="5 0 0 10"  FontWeight="ExtraLight"
+                   Foreground="Red" Visibility="Hidden">
+            Hesla se neshodují !
+        </TextBlock>
+        <TextBlock x:Name="Tbl_Smlr" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   Margin="5 0 0 10"  FontWeight="ExtraLight"
+                   Foreground="Green" Visibility="Hidden">
+            Hesla se shodují !
+        </TextBlock>
+        <Button x:Name="bt_Reg_RegOk" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="1" HorizontalAlignment="Center" MinWidth="100" MaxHeight="50" MinHeight="50" VerticalAlignment="Top" Margin="5 0 0 10" FontWeight="ExtraLight" Click="bt_Reg_RegOk_Click">
+            Done
+        </Button>
+
+        <Button x:Name="bt_Reg_ToLog" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="1" HorizontalAlignment="Center" MinHeight="50" MinWidth="100" MaxHeight="50" VerticalAlignment="Top" Margin="0 0 5 10" FontWeight="ExtraLight" Click="bt_Reg_ToLog_Click">
+            Sign In
+        </Button>
+
+        <Button x:Name="bt_Reg_Exit" Grid.Row="0" Grid.Column="4" Background="IndianRed" VerticalAlignment="Top" HorizontalAlignment="Right" MinWidth="30" MinHeight="30" Margin="0 5 5 0" FontWeight="ExtraBold" Click="bt_Reg_Exit_Click">
+            X
+        </Button>
+    </Grid>
+</Window>

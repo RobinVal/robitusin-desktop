@@ -1,0 +1,9 @@
+Jestli Pana profesora bude zajímat funkčnost, 
+tak by se měl spíše podívat na ten newbase, 
+protože od toho začnu odvíjet zbytek naší aplikace.
+
+Myslím si, že v té nové se dá i docela vyznat, 
+jen k tomu budete muset pustit Apinu a servery.
+
+Je tam přidělaná validace u shody hesla, ale bohužel
+jsem ještě nenahradil jednotlivá čísla hvězdami.

@@ -39,8 +39,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.18\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,16 +66,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ApiSettings.cs" />
     <Compile Include="ChatWindow.xaml.cs">
       <DependentUpon>ChatWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IApiSettings.cs" />
+    <Compile Include="LoginProcessor.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="ProfileWindow.xaml.cs">
       <DependentUpon>ProfileWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Validations.cs" />
     <Page Include="ChatWindow.xaml">
@@ -114,6 +124,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

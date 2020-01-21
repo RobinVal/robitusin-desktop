@@ -19,10 +19,15 @@ namespace Wpf_Desktop_Robitusin
     /// </summary>
     public partial class LoginWindow : Window
     {
-        
-        public LoginWindow()
+        public string Password { get; set; }
+        public string UserName { get; set; }
+
+
+        private IApiSettings _apisettings;
+        public LoginWindow(IApiSettings apiSettings)
         {
             InitializeComponent();
+            _apisettings = apiSettings;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,13 +43,17 @@ namespace Wpf_Desktop_Robitusin
                 MessageBox.Show("Kontaktujte prosím podporu :)");
             }
         }
+        public async Task LogIn()
+        {
+           var result = await _apisettings.Authenticate(UserName, Password);
+        }
 
         private void bt_Log_Click(object sender, RoutedEventArgs e)
         {
-            if(tb_Log_Username.Text != "" || tb_log_Password.Text != "")
-            {
-                
-            }
+            this.Password = tb_log_Password.Text;
+            this.UserName = tb_Log_Username.Text;
         }
     }
+}
+    
     
