@@ -34,25 +34,25 @@
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
             Username:
         </TextBlock>
-        <TextBox x:Name="tb_Reg_Username" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight">
+        <TextBox x:Name="tb_Reg_Username" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" MaxWidth="100" FontWeight="ExtraLight" FontSize="15">
             
         </TextBox>
         <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
             Email:
         </TextBlock>
-        <TextBox x:Name="tb_Reg_Email"  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight">
+        <TextBox x:Name="tb_Reg_Email"  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" MaxWidth="100" FontWeight="ExtraLight" FontSize="15">
 
         </TextBox>
         <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
             Password:
         </TextBlock>
-        <TextBox x:Name="tb_Reg_Password"  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight">
+        <TextBox x:Name="tb_Reg_Password"  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" MaxWidth="100" FontWeight="ExtraLight" FontSize="15">
 
         </TextBox>
         <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="0 0 0 10" FontSize="20" FontWeight="ExtraLight">
             Repeat Pass:
         </TextBlock>
-        <TextBox x:Name="tb_Reg_rPassword" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" FontWeight="ExtraLight" TextChanged="tb_Reg_rPassword_TextChanged">
+        <TextBox x:Name="tb_Reg_rPassword" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="10 0 0 10" MinWidth="100" MaxWidth="100" FontWeight="ExtraLight" FontSize="15">
 
         </TextBox>
         <TextBlock x:Name="Tbl_notSmlr" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center"

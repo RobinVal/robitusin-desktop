@@ -65,17 +65,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="APIhelper.cs" />
+    <Compile Include="Pattern.cs" />
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Validations\LogValidation.cs" />
-    <Compile Include="Validations\RegValidation.cs" />
+    <Compile Include="Validation\LogValidation.cs" />
+    <Compile Include="Validation\RegValidation.cs" />
     <Compile Include="ViewModels\RegViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ApiSettings.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

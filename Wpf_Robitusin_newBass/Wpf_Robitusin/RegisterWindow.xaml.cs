@@ -12,8 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Wpf_Robitusin.Validations;
-using static Wpf_Robitusin.ApiSettings;
+using Wpf_Robitusin.Models;
+using Wpf_Robitusin.Validation;
 
 namespace Wpf_Robitusin
 {
@@ -22,10 +22,12 @@ namespace Wpf_Robitusin
     /// </summary>
     public partial class RegisterWindow : Window
     {
-        RegValidation rv = new RegValidation();
-        ApiSettings apiSettings = new ApiSettings();
+        APIhelper api = new APIhelper();
+        RegValidation Rv = new RegValidation();
+        
         public RegisterWindow()
         {
+            ;
             InitializeComponent();
         }
 
@@ -43,40 +45,22 @@ namespace Wpf_Robitusin
 
         private void bt_Reg_RegOk_Click(object sender, RoutedEventArgs e)
         {
-            
-            using (var client = new HttpClient())
+            if (Rv.UserExists(tb_Reg_Username.Text))
             {
-                User u = new User
-                {
-                    Id = 5,
-                    Username = tb_Reg_Username.Text,
-                    Email = tb_Reg_Email.Text,
-                    Password = tb_Reg_Password.Text
-                };
-                client.BaseAddress = new Uri("http://localhost:49497/");
-                var response = client.PostAsJsonAsync("api/User/", u).Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    MessageBox.Show("Success");
-                }else
-                {
-                    MessageBox.Show("Error");
-                }
-            }
-        }
-
-        private void tb_Reg_rPassword_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (rv.PassSimlr(tb_Reg_Password.Text, tb_Reg_rPassword.Text) == false)
-            {
-                Tbl_notSmlr.Visibility = Visibility.Visible;
-                Tbl_Smlr.Visibility = Visibility.Hidden;
+                MessageBox.Show("Uživatel existuje");
             }
             else
             {
-                Tbl_notSmlr.Visibility = Visibility.Hidden;
-                Tbl_Smlr.Visibility = Visibility.Visible;
+                if (Rv.PassSame(tb_Reg_Password.Text, tb_Reg_rPassword.Text))
+                {
+                    string regpost = "{\"Username\":\"" + tb_Reg_Username.Text + "\",\"Email\":\"" + tb_Reg_Email.Text + "\",\"Password\":\"" + tb_Reg_Password.Text + "\",}";
+                    api.Post(regpost);
+                }
+                else
+                    MessageBox.Show("Hesla se neshodují");
             }
+            
+           
         }
     }
 }

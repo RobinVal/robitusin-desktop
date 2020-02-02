@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wpf_Robitusin.Models;
+using Wpf_Robitusin.Validation;
 
 namespace Wpf_Robitusin
 {
@@ -24,9 +25,8 @@ namespace Wpf_Robitusin
     /// </summary>
     public partial class MainWindow : Window
     {
-        LoginViewModel loginViewModel = new LoginViewModel();
-        public string Username { get; set; }
-        public string Password { get; set; }
+        APIhelper ah = new APIhelper();
+        LogValidation lv = new LogValidation();
         public MainWindow()
         {
             InitializeComponent();
@@ -39,11 +39,15 @@ namespace Wpf_Robitusin
 
         private void bt_Login_SignIn_Click(object sender, RoutedEventArgs e)
         {
-            Username = tb_Login_Username.Text;
-            Password = tb_Login_Password.Text;
-
-            User myUser = loginViewModel.TryExisting(1); /* Uvnitř je Id pokusného ůčtu viz. LoginViewModel */
-            
+            if(lv.UserExists(tb_Login_Username.Text,tb_Login_Password.Text) == true)
+            {
+                MessageBox.Show("úspěšně přihlášen");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Zkontrolujte přihlašovací údaje");
+            }
 
         }
 

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wpf_Robitusin.Validations
+namespace Wpf_Robitusin
 {
-    public class LogValidation
+    class Pattern
     {
-
     }
 }

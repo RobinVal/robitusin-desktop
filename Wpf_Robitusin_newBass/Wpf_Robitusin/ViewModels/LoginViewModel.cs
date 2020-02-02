@@ -11,11 +11,11 @@ namespace Wpf_Robitusin
 {
     public class LoginViewModel
     {
-        public User TryExisting(int id) /* Nemohu vyhledávat pomocí username, protože se dá zatím hledat pouze pomocí id */
+        public User TryExisting(string username) /* Nemohu vyhledávat pomocí username, protože se dá zatím hledat pouze pomocí id */
         {
             HttpClient apiClient = new HttpClient();
             apiClient.BaseAddress = new Uri("http://localhost:49497/");
-            HttpResponseMessage response = apiClient.GetAsync("api/User/" + id).Result;
+            HttpResponseMessage response = apiClient.GetAsync("api/User/" + username).Result;
             /*
             var emp = response.Content.ReadAsAsync<IEnumerable<User>>().Result;
             string k = response.Content.ReadAsStringAsync().Result;
