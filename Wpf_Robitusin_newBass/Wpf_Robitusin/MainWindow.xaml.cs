@@ -27,6 +27,8 @@ namespace Wpf_Robitusin
     {
         APIhelper ah = new APIhelper();
         LogValidation lv = new LogValidation();
+        ProfilePage pp = new ProfilePage();
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -42,6 +44,7 @@ namespace Wpf_Robitusin
             if(lv.UserExists(tb_Login_Username.Text,tb_Login_Password.Text) == true)
             {
                 MessageBox.Show("úspěšně přihlášen");
+                pp.Show();
                 this.Close();
             }
             else

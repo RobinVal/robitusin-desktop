@@ -44,3 +44,5 @@ D:\robitusin-desktop\Wpf_Robitusin_newBass\Wpf_Robitusin\obj\Debug\Wpf_Robitusin
 D:\robitusin-desktop\Wpf_Robitusin_newBass\Wpf_Robitusin\obj\Debug\Wpf_Robitusin.Properties.Resources.resources
 D:\robitusin-desktop\Wpf_Robitusin_newBass\Wpf_Robitusin\obj\Debug\Wpf_Robitusin.csproj.GenerateResource.cache
 D:\robitusin-desktop\Wpf_Robitusin_newBass\Wpf_Robitusin\obj\Debug\Wpf_Robitusin.csproj.CopyComplete
+D:\robitusin-desktop\Wpf_Robitusin_newBass\Wpf_Robitusin\obj\Debug\ProfilePage.g.cs
+D:\robitusin-desktop\Wpf_Robitusin_newBass\Wpf_Robitusin\obj\Debug\ProfilePage.baml

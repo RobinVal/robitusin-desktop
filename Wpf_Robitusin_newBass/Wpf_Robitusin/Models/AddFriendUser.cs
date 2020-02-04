@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wpf_Robitusin.ViewModels
+namespace Wpf_Robitusin.Models
 {
-    public class RegViewModel
+    public class AddFriendUser
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

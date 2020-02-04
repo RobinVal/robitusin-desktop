@@ -1,0 +1,84 @@
+﻿<Window x:Class="Wpf_Robitusin.ProfilePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Robitusin"
+        mc:Ignorable="d"
+        Title="ProfilePage" Height="800" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Grid.Column="0" Fill="Orange" Grid.RowSpan="50"/>
+        <Rectangle Grid.Row="0" Grid.Column="0" Fill="Orange" Grid.ColumnSpan="50"/>
+        <TextBlock x:Name="TxtUsername" Grid.RowSpan="50" Grid.Row="0" Grid.Column="0" Margin="10 0 0 0" HorizontalAlignment="Left" VerticalAlignment="top" FontSize="40" Text="Default" FontWeight="Bold"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="10" Margin="0 10 0 0" Orientation="Vertical">
+            <Button Padding="0 10 0 10" x:Name="btnAddfriend" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Add Friend" FontSize="25" Margin="14,0,10,9" Background="Orange" BorderBrush="Orange" Click="btnAddfriend_Click"/>
+            <Button Padding="0 10 0 10" x:Name="btnFriendship" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Friend List" FontSize="25" Margin="14,0,10,9" Background="Orange" BorderBrush="Orange" Click="btnFriendship_Click"/>
+            <Button Padding="0 10 0 10" x:Name="btnPending" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Pending List" FontSize="25" Margin="14,0,10,9" Background="Orange" BorderBrush="Orange" Click="btnPending_Click" />
+        </StackPanel>
+        
+        
+
+        <!---->
+<!-- Add Friend Stack Panel -->
+        <!---->
+        <StackPanel x:Name="PanelAddFriend" Grid.Row="1" Grid.Column="1" Visibility="Hidden">
+            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="Thin" Margin="50 5 0 10">Do you want to add friend to your friendlist?</TextBlock>
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="10 0 0 0" >
+                <TextBox x:Name="tbAddFriend" MaxWidth="300" MinWidth="300" MinHeight="50" BorderBrush="Black" BorderThickness="2" FontSize="50"></TextBox>
+                <Button x:Name="btAddFriend" MinHeight="50" MinWidth="100" FontSize="20" Margin="10 0 0 0" Content="Add" Background="LightGreen" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="btAddFriend_Click"/>
+                <Button x:Name="btCloseAddFriendPanel" MinHeight="50" MinWidth="100" FontSize="20" Margin="10 0 0 0" Content="Close" Background="Firebrick" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="btCloseAddFriendPanel_Click"/>
+            </StackPanel>
+            <ListBox x:Name="lbAddFriend" Grid.RowSpan="4" FontSize="20" FontWeight="Light" Margin="10 10 0 0" SelectionChanged="lbAddFriend_SelectionChanged"></ListBox>
+        </StackPanel>
+
+        
+        
+        <!---->
+<!-- Friend List Stack Panel -->
+        <!---->
+        <StackPanel x:Name="PanelFriendship" Grid.Row="1" Grid.Column="1" Orientation="Vertical" Grid.RowSpan="10" Visibility="Hidden">
+            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="Thin" Margin="50 5 0 10">Here you can see your friend list....</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" FontWeight="Thin" Margin="50 10 0 10">Select to </TextBlock>
+                <Button x:Name="btnRemoveFriend" MinHeight="50" HorizontalAlignment="Center" FontSize="20" Margin="10 0 0 0" Content="Remove Friend" Background="Firebrick" FontWeight="Bold" BorderBrush="Black" BorderThickness="0"></Button>
+            </StackPanel>
+            <ListBox x:Name="lbFriendList" Grid.RowSpan="4" FontSize="20" FontWeight="Light" Margin="10 10 0 0" Padding="0 0 0 0"></ListBox>
+        </StackPanel>
+
+        
+        
+        <!---->
+<!-- Panding List Stack Panel -->
+        <!---->
+        <StackPanel x:Name="PanelPanding" Grid.Row="1" Grid.Column="1" Orientation="Vertical" Grid.RowSpan="10">
+            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="Thin" Margin="10 5 0 10">Here you can manage your friendships....</TextBlock>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 10">
+                    <Button x:Name="btnFriendshipConfirm" MinHeight="50"  FontSize="20" Margin="10 0 0 0"  Background="LightGreen" FontWeight="Bold" BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Right" Click="btnFriendshipConfirm_Click">Confirm</Button>
+                    <Button x:Name="btnFriendshipDeny" MinHeight="50"  FontSize="20" Margin="10 0 0 0"  Background="Firebrick" FontWeight="Bold" BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Right" Click="btnFriendshipDeny_Click">Deny</Button>
+                </StackPanel>
+                <ListBox x:Name="lbPanding" Grid.RowSpan="4" FontSize="20" FontWeight="Light" Margin="10 10 0 0" Padding="0 0 0 0"></ListBox>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Window>
