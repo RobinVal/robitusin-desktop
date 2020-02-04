@@ -92,9 +92,9 @@ namespace Wpf_Robitusin
 
         private void btnFriendshipConfirm_Click(object sender, RoutedEventArgs e)
         {
-            apiHandler.FriendshipConfirmed(lbPanding.SelectedItem.ToString());
-            this.Close();
-            this.Show();
+            string text = lbPanding.SelectedItem.ToString();
+            apiHandler.FriendshipConfirmed(text);
+            lbPanding.Items.Refresh();
         }
 
         private void btnPending_Click(object sender, RoutedEventArgs e)

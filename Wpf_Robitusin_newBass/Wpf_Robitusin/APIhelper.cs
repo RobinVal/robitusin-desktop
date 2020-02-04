@@ -6,9 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using System.Net;
+using System.Net.WebSockets;
 using Wpf_Robitusin.Models;
 using System.IO;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 
 namespace Wpf_Robitusin
 {
@@ -282,15 +285,34 @@ namespace Wpf_Robitusin
             {
                 if (item.RecieverId == LoggedUser.Id && item.SenderId == sender.Id)
                 {
-                    item.Id = friendships.Count+1;
+                    
                     int RecieverId = LoggedUser.Id;
                     int SenderId = sender.Id;
                     bool Status = true;
-                    PostFriendship("{\"SenderId\":\"" + SenderId + "\",\"RecieverId\":\"" + RecieverId + "\",\"Status\":\"" + Status + "\",}");
+                    PutFriendship("{\"SenderId\":\"" + SenderId + "\",\"RecieverId\":\"" + RecieverId + "\",\"Status\":\"" + Status + "\",}",item.Id);
                 }
 
             }
 
         }
+        public void PutFriendship(string path,int Id)
+        {
+            string url = String.Format("http://localhost:49497/Api/Friendship?Id="+ Id+"");
+            WebRequest requestObject = WebRequest.Create(url);
+            requestObject.Method = "PUT";
+            requestObject.ContentType = "text/json";
+            using(var streamWriter = new StreamWriter(requestObject.GetRequestStream()))
+            {
+                streamWriter.Write(path);
+            }
+            var httpResponse = (HttpWebResponse)requestObject.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var responseText = streamReader.ReadToEnd();
+            }
+
+
+        }
+        
     }
 }
